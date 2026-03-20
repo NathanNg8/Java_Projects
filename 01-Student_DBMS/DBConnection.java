@@ -10,7 +10,6 @@ public class DBConnection {
 
     public static Connection getConnection() {
         try {
-            // Remove the explicit driver loading - let DriverManager find it automatically
             return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
             System.out.println("Failed to connect to database");
